@@ -1,7 +1,7 @@
-# curriculum-databases-projects-template
+<!-- # curriculum-databases-projects-template
 
 > This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise. -->
 
 
 ## Getting Started
@@ -262,7 +262,7 @@ I would like to thank microverse
 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+<!-- > Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **[Question_1]**
 
@@ -270,7 +270,7 @@ I would like to thank microverse
 
 - **[Question_2]**
 
-  - [Answer_2]
+  - [Answer_2] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
