@@ -8,3 +8,85 @@ SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
 SELECT * FROM animals WHERE neutered = true;
 SELECT * FROM animals WHERE name != 'Gabumon';
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+
+BEGIN;
+UPDATE animals
+SET species = 'unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+
+-- Begin the transaction
+BEGIN;
+
+-- Update species to 'digimon' for animals with names ending in 'mon'
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+
+-- Update species to 'pokemon' for animals without a species
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
+
+-- Verify the changes
+SELECT * FROM animals;
+
+-- Commit the transaction
+COMMIT;
+
+-- Verify that changes persist after commit
+SELECT * FROM animals;
+
+
+-- Begin the transaction
+BEGIN;
+
+-- Delete all records from the animals table
+DELETE FROM animals;
+
+-- Verify that records are deleted
+SELECT * FROM animals;
+
+-- Roll back the transaction
+ROLLBACK;
+
+SELECT * FROM animals;
+
+
+-- Begin the transaction
+BEGIN;
+
+-- Delete animals born after Jan 1st, 2022
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+
+-- Create a savepoint
+SAVEPOINT my_savepoint;
+
+-- Update weights to be their weight multiplied by -1
+UPDATE animals SET weight_kg = weight_kg * -1;
+
+-- Verify the changes
+SELECT * FROM animals;
+
+-- Roll back to the savepoint
+ROLLBACK TO my_savepoint;
+
+-- Update negative weights back to positive using the absolute value
+UPDATE animals SET weight_kg = ABS(weight_kg) WHERE weight_kg < 0;
+
+-- Verify the changes
+SELECT * FROM animals;
+
+-- Commit the transaction
+COMMIT;
+
+
+SELECT COUNT(*) FROM animals;
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+SELECT AVG(weight_kg) FROM animals;
+SELECT neutered, MAX(escape_attempts) FROM animals GROUP BY neutered;
+SELECT species, MIN(weight_kg) AS min_weight, MAX(weight_kg) AS max_weight
+FROM animals GROUP BY species;
+SELECT species, AVG(escape_attempts) AS avg_escape_attempts
+FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
+GROUP BY species;
+
+
+
