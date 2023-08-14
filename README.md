@@ -100,7 +100,7 @@ go inside this project with:
 
 ## 👥 Author <a name="author"></a>
 
-👤 Ichsan Sandy
+👤 Olanike gloria
 
 - GitHub: [@olanikegloria](https://github.com/olanikegloria)
 - Twitter: [@olanikegloria](https://twitter.com/olanike)
