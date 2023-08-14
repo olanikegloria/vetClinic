@@ -102,9 +102,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Create_tables_in_sql]**
+- **[Insert_data_in_sql]**
+- **[write_queries_in_sql]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -210,15 +210,9 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@0lanikegloria](https://github.com/olanikegloria)
+- LinkedIn: [olanike olatunji](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,9 +222,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[database_tansactions]**
+- [ ] **[delete_data_in_sql]**
+- [ ] **[prepare_complex_queries_in_sql]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -260,7 +254,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
