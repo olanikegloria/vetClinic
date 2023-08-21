@@ -98,13 +98,20 @@ go inside this project with:
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="author"></a>
+## 👥 Author 1 <a name="author"></a>
 
 👤 Olanike gloria
 
 - GitHub: [@olanikegloria](https://github.com/olanikegloria)
 - Twitter: [@olanikegloria](https://twitter.com/olanike)
 - LinkedIn: [olanike olatunji](https://linkedin.com/olani)
+
+## 👥 Author 2 <a name="author"></a>
+
+👤 Sazzad
+
+- GitHub: [@githubhandle](https://github.com/SAZZAD1Q2/Vet-Clinic.git)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sazzad3y/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

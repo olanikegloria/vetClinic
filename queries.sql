@@ -124,3 +124,16 @@ LEFT JOIN animals a ON o.id = a.owner_id
 GROUP BY o.full_name
 ORDER BY animal_count DESC
 LIMIT 1;
+
+
+-- My code starts from here
+
+-- Calculate the number of visits for the animal with ID 4 and provide query execution details.
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits WHERE animal_id = 4;
+
+-- Retrieve visit records associated with the vet having ID 2 and display query execution details.
+EXPLAIN ANALYZE SELECT * FROM visits WHERE vet_id = 2;
+
+-- Fetch owner records with the specified email address ('owner_18327@mail.com') and include query execution details.
+EXPLAIN ANALYZE SELECT * FROM owners WHERE email = 'owner_18327@mail.com';
+
