@@ -103,18 +103,9 @@ VALUES
    (10, 3, '2020-05-24'),
    (10, 1, '2021-01-11');
 
-   -- The subsequent query is projected to contribute roughly 3,594,280 additional visits. This projection takes into account a scenario involving 10 animals, 4 vets, and an estimated usage of approximately 87,000 timestamps (equivalent to around 4 minutes).
+ 
+-- This will add 3.594.280 visits considering you have 10 animals, 4 vets, and it will use around ~87.000 timestamps (~4min approx.)
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
 
-INSERT INTO visits (animal_id, vet_id, date_of_visit)
-SELECT * FROM (
-SELECT id FROM animals
-) AS animal_ids,
-(
-SELECT id FROM vets
-) AS vets_ids,
-generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') AS visit_timestamp;
-
--- Similarly, running this query will lead to the inclusion of approximately 2,500,000 owners in the database. Each owner's full_name will follow the pattern 'Owner <X>', and their respective emails will be in the format 'owner_<X>@mail.com' (~2 minutes approx.).
-
-INSERT INTO owners (full_name, email)
-SELECT 'Owner ' || generate_series(1, 2500000), 'owner_' || generate_series(1, 2500000) || '@mail.com';
+-- This will add 2.500.000 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (~2min approx.)
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
